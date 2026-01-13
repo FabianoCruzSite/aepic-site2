@@ -1,0 +1,1925 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AEPIC - Associação das Empresas do Parque Industrial de Cambé</title>
+    <meta name="description" content="AEPIC: Fortalecendo empresas, impulsionando Cambé. Representatividade, networking e desenvolvimento econômico para indústrias de Cambé e região.">
+    
+    <!-- Meta tags Instagram -->
+    <meta property="og:title" content="AEPIC - Associação das Empresas do Parque Industrial de Cambé">
+    <meta property="og:description" content="Fortalecendo empresas, impulsionando Cambé.">
+    <meta property="og:image" content="https://lh3.googleusercontent.com/d/1-NiJSQjgj-gb16G7LgNrvQ1sGTs2FclQ=s1000">
+    <meta property="og:url" content="https://seu-site-aepic.com">
+    <meta name="instagram:site" content="@associacaoaepic">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Poppins', sans-serif; line-height: 1.6; color: #202020; background: #E5E8EB; padding-top: 70px; }
+        a { text-decoration: none; color: inherit; }
+        
+        /* NAVBAR */
+        nav { 
+            background: #161C33; 
+            padding: 0; 
+            position: fixed; 
+            width: 100%; 
+            top: 0; 
+            z-index: 1000; 
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            height: 70px;
+            display: flex;
+            align-items: center;
+        }
+        .nav-container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-mobile {
+            display: none;
+            max-width: 120px;
+        }
+        nav ul { 
+            list-style: none; 
+            display: flex; 
+            justify-content: center; 
+            flex-wrap: wrap;
+            gap: 1.2rem;
+        }
+        nav li { margin: 0; }
+        nav a { 
+            color: #E5E8EB; 
+            font-weight: 500; 
+            font-size: 0.95rem;
+            padding: 0.5rem 0.8rem;
+            border-radius: 4px;
+            transition: all 0.3s; 
+            white-space: nowrap;
+        }
+        nav a:hover { 
+            color: #68748C; 
+            background: rgba(255,255,255,0.1);
+        }
+        
+        /* MENU HAMBURGUER */
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: #E5E8EB;
+            font-size: 1.8rem;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+        
+        section { 
+            padding: 80px 5%; 
+            max-width: 1200px; 
+            margin: 0 auto; 
+            scroll-margin-top: 80px;
+        }
+        h1, h2, h3 { color: #161C33; }
+        
+        /* HERO */
+        .hero {
+            background: linear-gradient(rgba(22,28,51,0.95), rgba(22,28,51,0.95)), #161C33;
+            color: white;
+            text-align: center;
+            padding: 80px 5% 70px;
+            margin-top: 0;
+            border-radius: 0 0 20px 20px;
+            min-height: 85vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .logo-aepic {
+            max-width: 320px;
+            margin: 0 auto 2.5rem;
+            display: block;
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
+        }
+        
+        .hero h1 { 
+            font-size: 2.8rem; 
+            margin-bottom: 1.5rem; 
+            font-weight: 700; 
+            line-height: 1.2;
+            max-width: 800px;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .principal-text {
+            font-size: 1.3rem;
+            font-weight: 400;
+            margin-bottom: 1.5rem;
+            line-height: 1.5;
+            opacity: 0.95;
+        }
+        
+        .subtitle-text {
+            font-size: 1.1rem;
+            margin-bottom: 3rem;
+            color: #E5E8EB;
+            line-height: 1.6;
+            opacity: 0.9;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .btn { 
+            display: inline-block; 
+            background: #68748C; 
+            color: white; 
+            padding: 1.2rem 2.5rem; 
+            border-radius: 8px; 
+            font-weight: 600; 
+            transition: all 0.3s; 
+            border: 2px solid transparent;
+            font-size: 1.1rem;
+            min-width: 250px;
+            margin-top: 1rem;
+        }
+        .btn-primary { 
+            background: #25D366;
+            border-color: #25D366; 
+        }
+        .btn:hover { 
+            background: #575A63 !important; 
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+        }
+        .btn-primary:hover {
+            background: #1da851 !important;
+            border-color: #1da851;
+        }
+        
+        /* SOBRE */
+        .sobre-item {
+            margin-bottom: 2.8rem;
+        }
+        .sobre-item h3 {
+            color: #161C33;
+            font-size: 1.6rem;
+            margin-bottom: 1.2rem;
+            border-bottom: 3px solid #68748C;
+            padding-bottom: 0.6rem;
+            display: inline-block;
+        }
+        .sobre-item p {
+            margin-bottom: 1.2rem;
+            line-height: 1.7;
+            font-size: 1.05rem;
+        }
+        
+        /* VALORES */
+        .valores-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.2rem;
+            margin-top: 1.5rem;
+        }
+        .valor-item {
+            background: #f8f9fa;
+            padding: 1.2rem;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: 600;
+            color: #161C33;
+            border-left: 4px solid #68748C;
+            font-size: 1rem;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 90px;
+            transition: all 0.3s ease;
+        }
+        .valor-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+            background: #e9ecef;
+        }
+        
+        /* CARROSSEL BENEFÍCIOS */
+        .beneficios-carousel {
+            position: relative;
+            margin-top: 3rem;
+            overflow: hidden;
+        }
+        .beneficios-container {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            gap: 2rem;
+        }
+        .beneficios-page {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            flex: 0 0 100%;
+            min-width: 100%;
+        }
+        .beneficio-card {
+            background: white;
+            padding: 2.2rem;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border-top: 5px solid #161C33;
+            height: 100%;
+        }
+        .beneficio-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+        }
+        .beneficio-card h3 {
+            color: #161C33;
+            font-size: 1.4rem;
+            margin-bottom: 1.2rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 2px solid #68748C;
+        }
+        .beneficio-card p {
+            color: #202020;
+            line-height: 1.7;
+            font-size: 1rem;
+        }
+        .carousel-controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 3rem;
+            gap: 1.5rem;
+        }
+        .carousel-btn {
+            background: #161C33;
+            color: white;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .carousel-btn:hover {
+            background: #68748C;
+            transform: scale(1.1);
+        }
+        .carousel-dots {
+            display: flex;
+            gap: 0.8rem;
+        }
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #ccc;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .dot.active {
+            background: #161C33;
+            transform: scale(1.2);
+        }
+        .carousel-indicator {
+            font-size: 1.1rem;
+            color: #575A63;
+            font-weight: 500;
+        }
+        
+        /* EMPRESAS */
+        .empresas-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+            gap: 2rem; 
+            margin-top: 3rem;
+        }
+        .empresa-card { 
+            background: white; 
+            padding: 2.2rem; 
+            border-radius: 12px; 
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08); 
+            text-align: center; 
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 220px;
+        }
+        .empresa-card:hover { 
+            transform: translateY(-8px); 
+            box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+        }
+        .empresa-logo {
+            max-width: 200px;
+            max-height: 110px;
+            margin-bottom: 1.2rem;
+            object-fit: contain;
+        }
+        .empresa-nome {
+            color: #161C33;
+            font-weight: 600;
+            font-size: 1.15rem;
+            margin-top: 0.8rem;
+        }
+        
+        /* DIRETORIA */
+        .diretoria-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+        .diretoria-card { 
+            overflow: hidden; 
+            border-radius: 18px;
+            background: white;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+        .diretoria-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+        }
+        .diretoria-card img { 
+            width: 100%; 
+            height: 320px;
+            object-fit: cover; 
+            display: block; 
+            object-position: center 25%;
+        }
+        .diretoria-card .card-content { 
+            padding: 1.8rem; 
+        }
+        .diretoria-card h3 { 
+            font-size: 1.5rem; 
+            font-weight: 600; 
+            margin-bottom: 0.6rem; 
+            color: #161C33; 
+        }
+        .diretoria-card .cargo { 
+            font-size: 1.15rem; 
+            color: #68748C; 
+            font-weight: 500; 
+            margin-bottom: 0.4rem; 
+        }
+        .diretoria-card .gestao { 
+            color: #575A63; 
+            font-size: 1rem; 
+            margin-bottom: 1.2rem; 
+        }
+        .diretoria-card p { 
+            text-align: left; 
+            font-size: 1rem; 
+            color: #202020; 
+            line-height: 1.6; 
+        }
+        
+        /* VAGAS */
+        .vagas-carousel {
+            position: relative;
+            margin-top: 3rem;
+            overflow: hidden;
+        }
+        .vagas-container {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            gap: 2rem;
+        }
+        .vagas-page {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            flex: 0 0 100%;
+            min-width: 100%;
+        }
+        .vaga-card {
+            background: white;
+            padding: 2.2rem;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border-top: 5px solid #25D366;
+            height: 100%;
+        }
+        .vaga-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+        }
+        .vaga-card h3 {
+            color: #161C33;
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 2px solid #25D366;
+        }
+        .vaga-info {
+            margin-bottom: 1.2rem;
+        }
+        .vaga-info p {
+            margin-bottom: 0.5rem;
+            color: #202020;
+            line-height: 1.6;
+        }
+        .vaga-contato {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+            font-size: 0.95rem;
+        }
+        .vaga-contato strong {
+            color: #161C33;
+        }
+        
+        .vagas-controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 3rem;
+            gap: 1.5rem;
+        }
+        .vagas-btn {
+            background: #161C33;
+            color: white;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .vagas-btn:hover {
+            background: #68748C;
+            transform: scale(1.1);
+        }
+        .vagas-dots {
+            display: flex;
+            gap: 0.8rem;
+        }
+        .vaga-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #ccc;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .vaga-dot.active {
+            background: #25D366;
+            transform: scale(1.2);
+        }
+        .vagas-indicator {
+            font-size: 1.1rem;
+            color: #575A63;
+            font-weight: 500;
+        }
+        
+        /* FORMULÁRIO */
+        .contact-form-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .contact-form-container label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: #161C33;
+        }
+        .contact-form-container input, 
+        .contact-form-container textarea, 
+        .contact-form-container button { 
+            width: 100%; 
+            padding: 1.1rem; 
+            margin-bottom: 1.5rem; 
+            border: 2px solid #68748C; 
+            border-radius: 8px; 
+            font-family: inherit; 
+            font-size: 1rem; 
+            transition: all 0.3s;
+        }
+        .contact-form-container input:focus, 
+        .contact-form-container textarea:focus { 
+            border-color: #161C33;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(22, 28, 51, 0.1);
+        }
+        .contact-form-container button { 
+            background: #161C33; 
+            color: white; 
+            border: none; 
+            font-weight: 500; 
+            cursor: pointer; 
+            transition: all 0.3s; 
+            font-size: 1.1rem; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 1rem;
+        }
+        .contact-form-container button:hover { 
+            background: #68748C;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .contact-form-container button:disabled {
+            background: #cccccc;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+        
+        .form-message {
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            text-align: center;
+            display: none;
+        }
+        .form-success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .form-error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        
+        /* RODAPÉ */
+        footer { 
+            background: #161C33; 
+            color: #E5E8EB; 
+            text-align: center; 
+            padding: 2.5rem 1rem; 
+            margin-top: 4rem;
+        }
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .footer-links {
+            margin-top: 1.5rem;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        .footer-links a {
+            color: #E5E8EB;
+            transition: color 0.3s;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+        }
+        .footer-links a:hover {
+            color: #68748C;
+            background: rgba(255,255,255,0.1);
+        }
+        .copyright {
+            margin-top: 1.5rem;
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+        
+        /* CONTATO COM INSTAGRAM */
+        .contact-direct {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #dee2e6;
+        }
+        .contact-direct h3 {
+            color: #161C33;
+            margin-bottom: 1.5rem;
+            font-size: 1.4rem;
+        }
+        .contact-info {
+            display: inline-block;
+            text-align: left;
+            margin-top: 1rem;
+        }
+        .contact-info p {
+            margin-bottom: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.05rem;
+        }
+        .contact-info i {
+            color: #25D366;
+            width: 25px;
+            text-align: center;
+            font-size: 1.3rem;
+        }
+        .contact-info .fa-map-marker-alt {
+            color: #68748C;
+        }
+        .contact-info .fa-instagram {
+            color: #E4405F;
+        }
+        .contact-info a {
+            color: #161C33;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-weight: 500;
+        }
+        .contact-info a:hover {
+            color: #68748C;
+            text-decoration: underline;
+        }
+        
+        /* INSTAGRAM SECTION */
+        .instagram-section {
+            background: white;
+            border-radius: 12px;
+            padding: 3rem;
+            margin-top: 2rem;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+        }
+        
+        .instagram-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 2.5rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .instagram-header h2 {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            color: #161C33;
+            font-size: 1.8rem;
+        }
+        
+        .instagram-header .fa-instagram {
+            color: #E4405F;
+            font-size: 2rem;
+        }
+        
+        .btn-instagram {
+            background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+        
+        .btn-instagram:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            color: white;
+        }
+        
+        /* Instagram Carrossel */
+        .instagram-carousel {
+            position: relative;
+            margin-top: 2rem;
+            overflow: hidden;
+        }
+        
+        .instagram-container {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            gap: 2rem;
+        }
+        
+        .instagram-page {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            flex: 0 0 100%;
+            min-width: 100%;
+        }
+        
+        .instagram-post {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border: 1px solid #e6e6e6;
+        }
+        
+        .instagram-post:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+        }
+        
+        .instagram-post-img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .instagram-post-content {
+            padding: 1.5rem;
+        }
+        
+        .instagram-post h3 {
+            color: #161C33;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 2px solid #E4405F;
+        }
+        
+        .instagram-post p {
+            color: #202020;
+            line-height: 1.6;
+            margin-bottom: 1.2rem;
+            font-size: 1rem;
+        }
+        
+        .instagram-post-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #E4405F;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .instagram-post-link:hover {
+            color: #C13584;
+            text-decoration: underline;
+        }
+        
+        .instagram-controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 3rem;
+            gap: 1.5rem;
+        }
+        
+        .instagram-btn {
+            background: #161C33;
+            color: white;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        
+        .instagram-btn:hover {
+            background: #68748C;
+            transform: scale(1.1);
+        }
+        
+        .instagram-dots {
+            display: flex;
+            gap: 0.8rem;
+        }
+        
+        .instagram-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #ccc;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .instagram-dot.active {
+            background: #E4405F;
+            transform: scale(1.2);
+        }
+        
+        .instagram-indicator {
+            font-size: 1.1rem;
+            color: #575A63;
+            font-weight: 500;
+        }
+        
+        /* REDES SOCIAIS */
+        .social-footer {
+            margin-top: 2rem;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+        
+        .social-footer a {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            transition: all 0.3s;
+        }
+        
+        .social-footer .whatsapp {
+            background: #25D366;
+        }
+        
+        .social-footer .instagram {
+            background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
+        }
+        
+        .social-footer a:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        /* RESPONSIVIDADE */
+        @media (max-width: 768px) { 
+            body {
+                padding-top: 60px;
+            }
+            
+            nav {
+                height: 60px;
+                padding: 0 15px;
+            }
+            
+            .nav-container {
+                padding: 0 15px;
+            }
+            
+            .menu-toggle {
+                display: block;
+            }
+            
+            nav ul {
+                position: fixed;
+                top: 60px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 60px);
+                background: #161C33;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                padding-top: 2rem;
+                gap: 0;
+                transition: left 0.3s ease;
+                overflow-y: auto;
+                z-index: 999;
+            }
+            
+            nav ul.active {
+                left: 0;
+            }
+            
+            nav li {
+                width: 100%;
+                text-align: center;
+                margin: 0;
+                border-bottom: 1px solid rgba(255,255,255,0.1);
+            }
+            
+            nav a {
+                display: block;
+                padding: 1.2rem;
+                font-size: 1.1rem;
+                width: 100%;
+            }
+            
+            .logo-mobile {
+                display: block;
+            }
+            
+            .hero { 
+                padding: 60px 5% 50px;
+                min-height: 80vh;
+            }
+            
+            section {
+                padding: 60px 5%;
+                scroll-margin-top: 70px;
+            }
+            
+            .logo-aepic {
+                max-width: 250px;
+                margin-bottom: 1.5rem;
+            }
+            
+            .hero h1 { 
+                font-size: 2rem; 
+                margin-bottom: 1.2rem;
+            }
+            
+            .principal-text {
+                font-size: 1.2rem;
+                margin-bottom: 1.2rem;
+            }
+            
+            .subtitle-text {
+                font-size: 1rem;
+                margin-bottom: 2rem;
+            }
+            
+            .btn {
+                min-width: 200px;
+                padding: 1rem 2rem;
+            }
+            
+            .beneficios-page,
+            .vagas-page,
+            .instagram-page {
+                grid-template-columns: 1fr !important;
+                gap: 1.5rem;
+            }
+            
+            .valores-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+            
+            .empresas-grid { 
+                grid-template-columns: repeat(2, 1fr); 
+                gap: 1.5rem;
+            }
+            
+            .diretoria-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .diretoria-card img { 
+                height: 300px; 
+            }
+            
+            .footer-links { 
+                flex-direction: column; 
+                gap: 1rem; 
+            }
+            
+            .beneficio-card,
+            .vaga-card,
+            .instagram-post {
+                padding: 1.8rem;
+            }
+            
+            .contact-form-container input,
+            .contact-form-container textarea,
+            .contact-form-container button {
+                padding: 1rem;
+            }
+            
+            .contact-info p {
+                font-size: 1rem;
+            }
+            
+            .instagram-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .instagram-section {
+                padding: 2rem;
+            }
+            
+            .instagram-post-img {
+                height: 250px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero h1 { 
+                font-size: 1.8rem; 
+            }
+            
+            .principal-text { 
+                font-size: 1.1rem; 
+            }
+            
+            .logo-aepic { 
+                max-width: 220px; 
+            }
+            
+            .empresas-grid { 
+                grid-template-columns: 1fr; 
+            }
+            
+            .valores-grid { 
+                grid-template-columns: 1fr;
+            }
+            
+            .diretoria-card img { 
+                height: 280px; 
+            }
+            
+            .beneficio-card h3,
+            .vaga-card h3,
+            .instagram-post h3 {
+                font-size: 1.3rem;
+            }
+            
+            .carousel-controls,
+            .vagas-controls,
+            .instagram-controls {
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+            
+            .instagram-post-img {
+                height: 200px;
+            }
+        }
+    
+/* ================================
+   LIMPEZA DO CARROSSEL ANTIGO
+   ================================ */
+.instagram-carousel,
+.instagram-container,
+.instagram-page,
+.instagram-post,
+.instagram-post-img,
+.instagram-post-content,
+.instagram-controls,
+.instagram-btn,
+.instagram-dots,
+.instagram-dot,
+.instagram-indicator {
+    display: none !important;
+}
+
+/* ================================
+   INSTAGRAM – AJUSTE FINAL AEPIC
+   ================================ */
+.instagram-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+.instagram-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.instagram-header h2 {
+    font-size: 32px;
+    margin: 0;
+}
+
+.instagram-feed {
+    width: 100%;
+}
+
+/* ================================
+   RESPONSIVO
+   ================================ */
+@media (max-width: 768px) {
+    .instagram-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .instagram-header h2 {
+        font-size: 24px;
+    }
+}
+
+</style>
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav>
+        <div class="nav-container">
+            <img src="https://lh3.googleusercontent.com/d/1-NiJSQjgj-gb16G7LgNrvQ1sGTs2FclQ=s1000" alt="Logo AEPIC" class="logo-mobile">
+            
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <ul id="navMenu">
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#sobre">SOBRE</a></li>
+                <li><a href="#diretoria">DIRETORIA</a></li>
+                <li><a href="#empresas-associadas">EMPRESAS ASSOCIADAS</a></li>
+                <li><a href="#beneficios">BENEFÍCIOS</a></li>
+                <li><a href="#vagas-de-emprego">VAGAS DE EMPREGO</a></li>
+                <li><a href="#noticias">NOTÍCIAS</a></li>
+                <li><a href="#contato">CONTATO</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <img src="https://lh3.googleusercontent.com/d/1-NiJSQjgj-gb16G7LgNrvQ1sGTs2FclQ=s1000" alt="Logo AEPIC" class="logo-aepic">
+            
+            <h1>Fortalecendo empresas, impulsionando Cambé.</h1>
+            
+            <p class="principal-text">
+                A AEPIC representa o setor produtivo de Cambé, conectando empresas, fortalecendo o associativismo e impulsionando o desenvolvimento econômico local.
+            </p>
+            
+            <p class="subtitle-text">
+                Atuamos na defesa dos interesses das empresas, promovendo integração, representatividade e crescimento para Cambé.
+            </p>
+            
+            <a href="#contato" class="btn btn-primary">Quero ser associado</a>
+        </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section id="sobre" style="background: white;">
+        <h2>SOBRE A AEPIC</h2>
+        
+        <div class="sobre-item">
+            <h3>História</h3>
+            <p>A AEPIC – Associação das Empresas do Parque Industrial de Cambé atua há 8 anos representando e conectando empresas do setor produtivo, com foco no fortalecimento empresarial e no desenvolvimento econômico de Cambé. Ao longo de sua trajetória, a associação tem promovido a união entre empresas, incentivando o associativismo e ampliando a representatividade do empresariado local.</p>
+        </div>
+        
+        <div class="sobre-item">
+            <h3>Missão</h3>
+            <p>Conectar e representar as empresas associadas, fortalecendo o ambiente empresarial, promovendo a união entre negócios e contribuindo para o desenvolvimento econômico de Cambé.</p>
+        </div>
+        
+        <div class="sobre-item">
+            <h3>Visão</h3>
+            <p>Ser uma associação reconhecida pela representatividade, pela atuação institucional e pela contribuição efetiva para o crescimento sustentável do setor produtivo de Cambé.</p>
+        </div>
+        
+        <div class="sobre-item">
+            <h3>Valores</h3>
+            <div class="valores-grid">
+                <div class="valor-item">Ética</div>
+                <div class="valor-item">Transparência</div>
+                <div class="valor-item">União</div>
+                <div class="valor-item">Compromisso com o desenvolvimento local</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DIRETORIA -->
+    <section id="diretoria">
+        <h2>DIRETORIA</h2>
+        <p style="text-align: center; max-width: 800px; margin: 0 auto 3rem; font-size: 1.1rem; color: #575A63;">Gestão AEPIC 2025/2026</p>
+        <div class="diretoria-grid">
+            <div class="diretoria-card">
+                <img src="https://lh3.googleusercontent.com/d/1w13t4QdtqNwXJNgASzzum_ajy4mJEYo1=s1000" alt="Edcassio Pereira - Presidente AEPIC" loading="lazy">
+                <div class="card-content">
+                    <h3>Edcassio Pereira</h3>
+                    <div class="cargo">Presidente da AEPIC</div>
+                    <div class="gestao">Gestão 2025/2026</div>
+                    <p>Advogado formado pela Universidade Bandeirante de São Paulo, com pós-graduação em Direito Empresarial pela UEL. Sócio fundador da Edcassio Assessoria e Consultoria Empresarial. Administrador da EHP – Tongalli.</p>
+                </div>
+            </div>
+
+            <div class="diretoria-card">
+                <img src="https://lh3.googleusercontent.com/d/1x0GJN32mfr2TO6x3K0QLm8nR4BzQRRWe=s1000" alt="Egberto Luis Jardinette - Vice-Presidente" loading="lazy">
+                <div class="card-content">
+                    <h3>Egberto Luis Jardinette</h3>
+                    <div class="cargo">Vice-Presidente da AEPIC</div>
+                    <div class="gestao">Gestão 2025/2026</div>
+                    <p>Especialista em RH pela UNIFIL, graduado em Administração pela UEL. Consultor +20 anos. Ex-diretor ABRH-Londrina, professor e coautor livro benefícios. Sadia, Seara, AESA.</p>
+                </div>
+            </div>
+
+            <div class="diretoria-card">
+                <img src="https://lh3.googleusercontent.com/d/1tU9d3kMy_uz8tH6U79lTvFgs-yLPP7tf=s1000" alt="Alex Ribeiro - Diretor Comercial AEPIC" loading="lazy">
+                <div class="card-content">
+                    <h3>Alex Ribeiro</h3>
+                    <div class="cargo">Diretor Comercial da AEPIC</div>
+                    <div class="gestao">Gestão 2025/2026</div>
+                    <p>+15 anos imobiliário, sócio Imobiliária AXE. Vice-Presidente ACIC. Colunista Jornal Retrato (investimentos Cambé).</p>
+                </div>
+            </div>
+
+            <div class="diretoria-card">
+                <img src="https://lh3.googleusercontent.com/d/1lU4cT1-hAWv_xVic4ykhC7k-rYKA83Vq=s1000" alt="Iratan Rugila - Diretor Operações AEPIC" loading="lazy">
+                <div class="card-content">
+                    <h3>Iratan Rugila</h3>
+                    <div class="cargo">Diretor de Operações da AEPIC</div>
+                    <div class="gestao">Gestão 2025/2026</div>
+                    <p>Analista Facilities TMG. Análise Sistemas (Unicesumar), Gestão Projetos. Experiência facilities/projetos + formação História/Teologia.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EMPRESAS ASSOCIADAS -->
+    <section id="empresas-associadas">
+        <h2>EMPRESAS ASSOCIADAS</h2>
+        <p style="text-align: center; margin-bottom: 2rem;">Conheça as empresas que fazem parte da AEPIC e fortalecem o desenvolvimento de Cambé:</p>
+        
+        <div class="empresas-grid">
+            <div class="empresa-card">
+                <img src="https://lh3.googleusercontent.com/d/1rTvRRSrgjsSLc7RYCOjMh24gJawtJ_kY=s1000" alt="ACCOM Engenharia" class="empresa-logo">
+                <div class="empresa-nome">ACCOM Engenharia</div>
+            </div>
+            
+            <div class="empresa-card">
+                <img src="https://lh3.googleusercontent.com/d/15JCAlFJ-ahRcPmTZzWwOHQqCgRsl4W1U=s1000" alt="COCAMAR MÁQUINAS" class="empresa-logo">
+                <div class="empresa-nome">COCAMAR MÁQUINAS</div>
+            </div>
+            
+            <div class="empresa-card">
+                <img src="https://lh3.googleusercontent.com/d/1AG8LKL6s5Tq-3kz4clTqMTu_vDIMN0kG=s1000" alt="EDCASSIO CONSULTORIA" class="empresa-logo">
+                <div class="empresa-nome">EDCASSIO CONSULTORIA</div>
+            </div>
+            
+            <div class="empresa-card">
+                <img src="https://lh3.googleusercontent.com/d/1XW7SSesADaGHeqM_KxNN3-H8uTir6OQI=s1000" alt="AESA" class="empresa-logo">
+                <div class="empresa-nome">AESA</div>
+            </div>
+            
+            <div class="empresa-card">
+                <img src="https://lh3.googleusercontent.com/d/1Lwafu3bINdLx-n8lz05xNidzEC5OY7Nt=s1000" alt="Brasser Indústrias" class="empresa-logo">
+                <div class="empresa-nome">Brasser Indústrias</div>
+            </div>
+            
+            <div class="empresa-card">
+                <img src="https://lh3.googleusercontent.com/d/1YIe4m4_GTgY_yU9z6Uo0rs6b8OFIvn2F=s1000" alt="GDM" class="empresa-logo">
+                <div class="empresa-nome">GDM</div>
+            </div>
+            
+            <div class="empresa-card">
+                <img src="https://lh3.googleusercontent.com/d/1I-FB4pZh61lOxQ8r0FzUzyc5gUx9QUHw=s1000" alt="AXE NEGÓCIOS IMOBILIÁRIOS" class="empresa-logo">
+                <div class="empresa-nome">AXE NEGÓCIOS IMOBILIÁRIOS</div>
+            </div>
+            
+            <div class="empresa-card">
+                <img src="https://lh3.googleusercontent.com/d/1zIinFx5htG-h8XpIg3j1R1bUFpxI5n9F=s1000" alt="INGÁ" class="empresa-logo">
+                <div class="empresa-nome">INGÁ</div>
+            </div>
+            
+            <div class="empresa-card">
+                <img src="https://lh3.googleusercontent.com/d/1TS7ynfS1a9U8FShsSLWQlNvhvQQz4eVT=s1000" alt="PROTEKTO VIDA" class="empresa-logo">
+                <div class="empresa-nome">PROTEKTO VIDA</div>
+            </div>
+            
+            <div class="empresa-card">
+                <img src="https://lh3.googleusercontent.com/d/12QQ5zE0K_JajWJRcqYVlCKTh2yQb_1gR=s1000" alt="PUTT BROTHERS" class="empresa-logo">
+                <div class="empresa-nome">PUTT BROTHERS</div>
+            </div>
+            
+            <div class="empresa-card">
+                <img src="https://lh3.googleusercontent.com/d/1_tw-Z8IP4nysazVQyn7KQHHV2SYw8F3V=s1000" alt="RISARTE" class="empresa-logo">
+                <div class="empresa-nome">RISARTE</div>
+            </div>
+            
+            <div class="empresa-card">
+                <img src="https://lh3.googleusercontent.com/d/1FXXENcLGF_t-T2nsdH4ZXf1sgHxPNxTf=s1000" alt="RIVESA" class="empresa-logo">
+                <div class="empresa-nome">RIVESA</div>
+            </div>
+            
+            <div class="empresa-card">
+                <img src="https://lh3.googleusercontent.com/d/1yQqYxP3_T4o4yV06l8oQZbEfr3Pj0x9o=s1000" alt="SANDOZ" class="empresa-logo">
+                <div class="empresa-nome">SANDOZ</div>
+            </div>
+            
+            <div class="empresa-card">
+                <img src="https://lh3.googleusercontent.com/d/1LVxrd2elJYfloYZ3WnfDmZSm49rzGkEr=s1000" alt="SEALS - NAVY SEALS PR" class="empresa-logo">
+                <div class="empresa-nome">SEALS - NAVY SEALS PR</div>
+            </div>
+            
+            <div class="empresa-card">
+                <img src="https://lh3.googleusercontent.com/d/1apOeWwE_0InqAORZ8Nv-Fzwq7s1eO82s=s1000" alt="SPRAY DROP" class="empresa-logo">
+                <div class="empresa-nome">SPRAY DROP</div>
+            </div>
+            
+            <div class="empresa-card">
+                <img src="https://lh3.googleusercontent.com/d/1TQm2xQ8Kqo_K3Z8pAvz3j5uN9EAVJ6Zt=s1000" alt="TL MENTORIA" class="empresa-logo">
+                <div class="empresa-nome">TL MENTORIA</div>
+            </div>
+            
+            <div class="empresa-card">
+                <img src="https://lh3.googleusercontent.com/d/1VnuHDTatcL-_5kCvduF9HIRBp5xut5RS=s1000" alt="TMG" class="empresa-logo">
+                <div class="empresa-nome">TMG</div>
+            </div>
+            
+            <div class="empresa-card">
+                <img src="https://lh3.googleusercontent.com/d/18qXYKjmQ7AfpB04bygIMXKUPyf4C6EQB=s1000" alt="VITAL MED" class="empresa-logo">
+                <div class="empresa-nome">VITAL MED</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BENEFÍCIOS -->
+    <section id="beneficios" style="background: white;">
+        <h2>BENEFÍCIOS DO ASSOCIADO</h2>
+        
+        <div class="beneficios-carousel">
+            <div class="beneficios-container" id="beneficiosContainer">
+                <div class="beneficios-page">
+                    <div class="beneficio-card">
+                        <h3>Representatividade</h3>
+                        <p>Atuação institucional na defesa dos interesses das empresas associadas junto a entidades, parceiros e poder público.</p>
+                    </div>
+                    
+                    <div class="beneficio-card">
+                        <h3>Networking Empresarial</h3>
+                        <p>Integração entre empresas associadas, promovendo conexões estratégicas, troca de experiências e novas oportunidades de negócios.</p>
+                    </div>
+                </div>
+                
+                <div class="beneficios-page">
+                    <div class="beneficio-card">
+                        <h3>Fortalecimento da Marca</h3>
+                        <p>Maior visibilidade institucional para as empresas associadas, valorizando marcas e negócios no cenário local.</p>
+                    </div>
+                    
+                    <div class="beneficio-card">
+                        <h3>União Empresarial</h3>
+                        <p>A associação fortalece a união entre empresas, ampliando a força coletiva e a representatividade do setor produtivo.</p>
+                    </div>
+                </div>
+                
+                <div class="beneficios-page">
+                    <div class="beneficio-card">
+                        <h3>Ambiente de Negócios</h3>
+                        <p>Contribuição para a melhoria do ambiente empresarial em Cambé, por meio do diálogo e da atuação conjunta.</p>
+                    </div>
+                    
+                    <div class="beneficio-card">
+                        <h3>Divulgação de Vagas</h3>
+                        <p>Espaço dedicado à divulgação de vagas de emprego das empresas associadas, fortalecendo a conexão com a comunidade local.</p>
+                    </div>
+                </div>
+                
+                <div class="beneficios-page">
+                    <div class="beneficio-card">
+                        <h3>Apoio Institucional</h3>
+                        <p>Apoio e orientação em pautas de interesse comum às empresas associadas, sempre com foco no desenvolvimento empresarial.</p>
+                    </div>
+                    
+                    <div class="beneficio-card">
+                        <h3>Desenvolvimento Local</h3>
+                        <p>Atuação voltada ao crescimento econômico de Cambé, fortalecendo empresas, gerando oportunidades e incentivando o desenvolvimento da cidade.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="carousel-controls">
+                <button class="carousel-btn" id="prevBtn">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                
+                <div class="carousel-dots">
+                    <div class="dot active" data-index="0"></div>
+                    <div class="dot" data-index="1"></div>
+                    <div class="dot" data-index="2"></div>
+                    <div class="dot" data-index="3"></div>
+                </div>
+                
+                <span class="carousel-indicator" id="pageIndicator">1/4</span>
+                
+                <button class="carousel-btn" id="nextBtn">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- VAGAS -->
+    <section id="vagas-de-emprego" style="background: white;">
+        <h2>VAGAS DE EMPREGO</h2>
+        
+        <div class="vagas-carousel">
+            <div class="vagas-container" id="vagasContainer">
+                <div class="vagas-page">
+                    <div class="vaga-card">
+                        <h3>Brasser Indústrias</h3>
+                        <div class="vaga-info">
+                            <p><strong>Cargo:</strong> Auxiliar de Produção</p>
+                            <p><strong>Local:</strong> Cambé-PR</p>
+                            <p><strong>Requisitos:</strong> Ensino Médio completo, experiência prévia em indústria</p>
+                            <p><strong>Benefícios:</strong> VT, VR, Assistência Médica</p>
+                        </div>
+                        <div class="vaga-contato">
+                            <strong>Contato:</strong> candidate@brasser.com.br
+                        </div>
+                    </div>
+                    
+                    <div class="vaga-card">
+                        <h3>GDM</h3>
+                        <div class="vaga-info">
+                            <p><strong>Cargo:</strong> Operador de Máquinas</p>
+                            <p><strong>Local:</strong> Cambé-PR</p>
+                            <p><strong>Requisitos:</strong> Experiência com máquinas agrícolas, curso técnico em mecânica</p>
+                            <p><strong>Benefícios:</strong> VT, VR, Plano de Saúde, Cesta Básica</p>
+                        </div>
+                        <div class="vaga-contato">
+                            <strong>Contato:</strong> rh@gdm.com.br
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="vagas-page">
+                    <div class="vaga-card">
+                        <h3>ACCOM Engenharia</h3>
+                        <div class="vaga-info">
+                            <p><strong>Cargo:</strong> Engenheiro Civil</p>
+                            <p><strong>Local:</strong> Cambé-PR</p>
+                            <p><strong>Requisitos:</strong> CREA ativo, experiência em obras civis, AutoCAD</p>
+                            <p><strong>Benefícios:</strong> Salário compatível, PLR, Vale Alimentação</p>
+                        </div>
+                        <div class="vaga-contato">
+                            <strong>Contato:</strong> rh@accomengenharia.com.br
+                        </div>
+                    </div>
+                    
+                    <div class="vaga-card">
+                        <h3>AESA</h3>
+                        <div class="vaga-info">
+                            <p><strong>Cargo:</strong> Técnico em Eletrotécnica</p>
+                            <p><strong>Local:</strong> Cambé-PR</p>
+                            <p><strong>Requisitos:</strong> Curso técnico em eletrotécnica, experiência em manutenção</p>
+                            <p><strong>Benefícios:</strong> VT, VR, Assistência Médica, Seguro de Vida</p>
+                        </div>
+                        <div class="vaga-contato">
+                            <strong>Contato:</strong> trabalheconosco@aesa.com.br
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="vagas-page">
+                    <div class="vaga-card">
+                        <h3>RIVESA</h3>
+                        <div class="vaga-info">
+                            <p><strong>Cargo:</strong> Analista de Logística</p>
+                            <p><strong>Local:</strong> Cambé-PR</p>
+                            <p><strong>Requisitos:</strong> Superior em Logística, experiência com WMS, Excel avançado</p>
+                            <p><strong>Benefícios:</strong> VT, VR, Plano de Saúde, Auxílio Creche</p>
+                        </div>
+                        <div class="vaga-contato">
+                            <strong>Contato:</strong> rh@rivesa.com.br
+                        </div>
+                    </div>
+                    
+                    <div class="vaga-card">
+                        <h3>TMG</h3>
+                        <div class="vaga-info">
+                            <p><strong>Cargo:</strong> Analista de Facilities</p>
+                            <p><strong>Local:</strong> Cambé-PR</p>
+                            <p><strong>Requisitos:</strong> Superior completo, experiência em gestão de facilities</p>
+                            <p><strong>Benefícios:</strong> VT, VR, Plano de Saúde, Gympass</p>
+                        </div>
+                        <div class="vaga-contato">
+                            <strong>Contato:</strong> recrutamento@tmg.com.br
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="vagas-page">
+                    <div class="vaga-card">
+                        <h3>SANDOZ</h3>
+                        <div class="vaga-info">
+                            <p><strong>Cargo:</strong> Auxiliar de Laboratório</p>
+                            <p><strong>Local:</strong> Cambé-PR</p>
+                            <p><strong>Requisitos:</strong> Técnico em Química, experiência em laboratório farmacêutico</p>
+                            <p><strong>Benefícios:</strong> VT, VR, Plano de Saúde, Participação nos Lucros</p>
+                        </div>
+                        <div class="vaga-contato">
+                            <strong>Contato:</strong> carreiras@sandoz.com.br
+                        </div>
+                    </div>
+                    
+                    <div class="vaga-card">
+                        <h3>VITAL MED</h3>
+                        <div class="vaga-info">
+                            <p><strong>Cargo:</strong> Representante Comercial</p>
+                            <p><strong>Local:</strong> Cambé e região</p>
+                            <p><strong>Requisitos:</strong> Experiência em vendas B2B, CNH categoria B</p>
+                            <p><strong>Benefícios:</strong> Comissões, VR, Auxílio Combustível, Celular corporativo</p>
+                        </div>
+                        <div class="vaga-contato">
+                            <strong>Contato:</strong> comercial@vitalmed.com.br
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="vagas-controls">
+                <button class="vagas-btn" id="prevVagaBtn">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                
+                <div class="vagas-dots">
+                    <div class="vaga-dot active" data-index="0"></div>
+                    <div class="vaga-dot" data-index="1"></div>
+                    <div class="vaga-dot" data-index="2"></div>
+                    <div class="vaga-dot" data-index="3"></div>
+                </div>
+                
+                <span class="vagas-indicator" id="vagaIndicator">1/4</span>
+                
+                <button class="vagas-btn" id="nextVagaBtn">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- INSTAGRAM -->
+<section id="noticias" style="background: #f8f9fa;">
+    <div class="instagram-section">
+
+        <div class="instagram-header">
+            <h2>
+                <i class="fab fa-instagram"></i> Notícias da AEPIC no Instagram
+            </h2>
+            <a href="https://www.instagram.com/associacaoaepic/" target="_blank" class="btn-instagram">
+                <i class="fab fa-instagram"></i> Siga-nos no Instagram
+            </a>
+        </div>
+
+        <!-- FEED INSTAGRAM AUTOMÁTICO -->
+        <div class="instagram-feed">
+            <div class="elfsight-app-30ca9272-ab93-41e7-9d4a-05892c3c4fbc"></div>
+        </div>
+
+    </div>
+</section>
+
+<script src="https://static.elfsight.com/platform/platform.js" async></script>
+
+
+    <!-- CONTATO -->
+    <section id="contato" style="background: white;">
+        <h2>CONTATO</h2>
+        <p style="text-align: center; max-width: 700px; margin: 0 auto 3rem;">Conheça a AEPIC e associe-se para fortalecer seu negócio em Cambé.</p>
+        
+        <div class="form-message form-success" id="mensagemSucesso">
+            <i class="fas fa-check-circle" style="font-size: 2rem; margin-bottom: 1rem;"></i>
+            <h3>Mensagem Enviada com Sucesso!</h3>
+            <p>Obrigado pelo seu contato. Em breve retornaremos.</p>
+        </div>
+        
+        <div class="form-message form-error" id="mensagemErro">
+            <i class="fas fa-exclamation-triangle" style="font-size: 2rem; margin-bottom: 1rem;"></i>
+            <h3>Erro no Envio</h3>
+            <p id="textoErro">Ocorreu um erro. Tente novamente ou envie um email direto.</p>
+        </div>
+        
+        <div class="contact-form-container">
+            <form id="formContato" action="https://formspree.io/f/mlggenop" method="POST">
+                <label for="nome">Seu nome completo:</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+                
+                <label for="empresa">Nome da empresa:</label>
+                <input type="text" id="empresa" name="empresa" placeholder="Digite o nome da empresa" required>
+                
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone" placeholder="(11) 99999-9999" required>
+                
+                <label for="email">Seu e-mail:</label>
+                <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+                
+                <label for="mensagem">Sua mensagem:</label>
+                <textarea id="mensagem" name="mensagem" placeholder="Como podemos ajudar sua empresa?" rows="5" required></textarea>
+                
+                <input type="hidden" name="_subject" value="Novo contato do site AEPIC">
+                <input type="text" name="_gotcha" style="display:none">
+                <input type="hidden" name="_language" value="pt">
+                
+                <button type="submit" id="btnEnviar">
+                    <i class="fas fa-paper-plane"></i> Enviar Mensagem
+                </button>
+            </form>
+        </div>
+        
+        <div class="contact-direct">
+            <h3>Contato Direto</h3>
+            <div class="contact-info">
+                <p>
+                    <i class="fab fa-whatsapp"></i>
+                    <strong>WhatsApp:</strong> 
+                    <a href="https://wa.me/5543988529554" target="_blank">43 98852-9554</a>
+                </p>
+                <p>
+                    <i class="fab fa-instagram"></i>
+                    <strong>Instagram:</strong> 
+                    <a href="https://www.instagram.com/associacaoaepic/" target="_blank">@associacaoaepic</a>
+                </p>
+                <p>
+                    <i class="fas fa-map-marker-alt"></i>
+                    <strong>Endereço:</strong> Rodovia Pr-445 - Parque Residencial Ana Rosa, Cambe - PR, 86.183-600
+                </p>
+            </div>
+            
+            <div class="social-footer">
+                <a href="https://wa.me/5543988529554" target="_blank" class="whatsapp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="https://www.instagram.com/associacaoaepic/" target="_blank" class="instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p class="copyright">© 2026 AEPIC – Associação das Empresas do Parque Industrial de Cambé · CNPJ 26.095.263/0001-15</p>
+            <div class="footer-links">
+                <a href="politica-privacidade.html">Política de Privacidade</a>
+                <a href="termos-uso.html">Termos de Uso</a>
+            </div>
+            
+            <div class="social-footer">
+                <a href="https://wa.me/5543988529554" target="_blank" class="whatsapp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="https://www.instagram.com/associacaoaepic/" target="_blank" class="instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Menu Hamburguer
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
+        
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            const icon = menuToggle.querySelector('i');
+            if (navMenu.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+        
+        document.querySelectorAll('#navMenu a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                const icon = menuToggle.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            });
+        });
+        
+        // Carrossel de Benefícios
+        const beneficiosContainer = document.getElementById('beneficiosContainer');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const dots = document.querySelectorAll('.dot');
+        const pageIndicator = document.getElementById('pageIndicator');
+        
+        let currentPage = 0;
+        const totalPages = 4;
+        
+        function updateBeneficiosCarousel() {
+            const offset = -currentPage * 100;
+            beneficiosContainer.style.transform = `translateX(${offset}%)`;
+            
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentPage);
+            });
+            
+            pageIndicator.textContent = `${currentPage + 1}/${totalPages}`;
+        }
+        
+        function nextBeneficiosPage() {
+            currentPage = (currentPage + 1) % totalPages;
+            updateBeneficiosCarousel();
+        }
+        
+        function prevBeneficiosPage() {
+            currentPage = (currentPage - 1 + totalPages) % totalPages;
+            updateBeneficiosCarousel();
+        }
+        
+        nextBtn.addEventListener('click', nextBeneficiosPage);
+        prevBtn.addEventListener('click', prevBeneficiosPage);
+        
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                currentPage = index;
+                updateBeneficiosCarousel();
+            });
+        });
+        
+        let autoRotateBeneficios = setInterval(nextBeneficiosPage, 10000);
+        
+        beneficiosContainer.addEventListener('mouseenter', () => {
+            clearInterval(autoRotateBeneficios);
+        });
+        
+        beneficiosContainer.addEventListener('mouseleave', () => {
+            autoRotateBeneficios = setInterval(nextBeneficiosPage, 10000);
+        });
+        
+        // Carrossel de Vagas
+        const vagasContainer = document.getElementById('vagasContainer');
+        const prevVagaBtn = document.getElementById('prevVagaBtn');
+        const nextVagaBtn = document.getElementById('nextVagaBtn');
+        const vagaDots = document.querySelectorAll('.vaga-dot');
+        const vagaIndicator = document.getElementById('vagaIndicator');
+        
+        let currentVagaPage = 0;
+        const totalVagaPages = 4;
+        
+        function updateVagasCarousel() {
+            const offset = -currentVagaPage * 100;
+            vagasContainer.style.transform = `translateX(${offset}%)`;
+            
+            vagaDots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentVagaPage);
+            });
+            
+            vagaIndicator.textContent = `${currentVagaPage + 1}/${totalVagaPages}`;
+        }
+        
+        function nextVagaPage() {
+            currentVagaPage = (currentVagaPage + 1) % totalVagaPages;
+            updateVagasCarousel();
+        }
+        
+        function prevVagaPage() {
+            currentVagaPage = (currentVagaPage - 1 + totalVagaPages) % totalVagaPages;
+            updateVagasCarousel();
+        }
+        
+        nextVagaBtn.addEventListener('click', nextVagaPage);
+        prevVagaBtn.addEventListener('click', prevVagaPage);
+        
+        vagaDots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                currentVagaPage = index;
+                updateVagasCarousel();
+            });
+        });
+        
+        let autoRotateVagas = setInterval(nextVagaPage, 10000);
+        
+        vagasContainer.addEventListener('mouseenter', () => {
+            clearInterval(autoRotateVagas);
+        });
+        
+        vagasContainer.addEventListener('mouseleave', () => {
+            autoRotateVagas = setInterval(nextVagaPage, 10000);
+        });
+        
+        // Carrossel do Instagram
+        const instagramContainer = document.getElementById('instagramContainer');
+        const prevInstagramBtn = document.getElementById('prevInstagramBtn');
+        const nextInstagramBtn = document.getElementById('nextInstagramBtn');
+        const instagramDots = document.querySelectorAll('.instagram-dot');
+        const instagramIndicator = document.getElementById('instagramIndicator');
+        
+        let currentInstagramPage = 0;
+        const totalInstagramPages = 2;
+        
+        function updateInstagramCarousel() {
+            const offset = -currentInstagramPage * 100;
+            instagramContainer.style.transform = `translateX(${offset}%)`;
+            
+            instagramDots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentInstagramPage);
+            });
+            
+            instagramIndicator.textContent = `${currentInstagramPage + 1}/${totalInstagramPages}`;
+        }
+        
+        function nextInstagramPage() {
+            currentInstagramPage = (currentInstagramPage + 1) % totalInstagramPages;
+            updateInstagramCarousel();
+        }
+        
+        function prevInstagramPage() {
+            currentInstagramPage = (currentInstagramPage - 1 + totalInstagramPages) % totalInstagramPages;
+            updateInstagramCarousel();
+        }
+        
+        nextInstagramBtn.addEventListener('click', nextInstagramPage);
+        prevInstagramBtn.addEventListener('click', prevInstagramPage);
+        
+        instagramDots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                currentInstagramPage = index;
+                updateInstagramCarousel();
+            });
+        });
+        
+        let autoRotateInstagram = setInterval(nextInstagramPage, 8000);
+        
+        instagramContainer.addEventListener('mouseenter', () => {
+            clearInterval(autoRotateInstagram);
+        });
+        
+        instagramContainer.addEventListener('mouseleave', () => {
+            autoRotateInstagram = setInterval(nextInstagramPage, 8000);
+        });
+        
+        // Formulário
+        const formContato = document.getElementById('formContato');
+        const btnEnviar = document.getElementById('btnEnviar');
+        const mensagemSucesso = document.getElementById('mensagemSucesso');
+        const mensagemErro = document.getElementById('mensagemErro');
+        const textoErro = document.getElementById('textoErro');
+        
+        formContato.addEventListener('submit', function(e) {
+            const textoOriginal = btnEnviar.innerHTML;
+            btnEnviar.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
+            btnEnviar.disabled = true;
+            
+            mensagemSucesso.style.display = 'none';
+            mensagemErro.style.display = 'none';
+            
+            setTimeout(() => {
+                mensagemSucesso.style.display = 'block';
+                
+                mensagemSucesso.scrollIntoView({ behavior: 'smooth' });
+                
+                btnEnviar.innerHTML = textoOriginal;
+                btnEnviar.disabled = false;
+                
+                setTimeout(() => {
+                    formContato.reset();
+                }, 1000);
+                
+                setTimeout(() => {
+                    mensagemSucesso.style.display = 'none';
+                }, 8000);
+                
+            }, 1500);
+        });
+        
+        // Navegação suave
+        document.querySelectorAll('a[href^="#"]').forEach(a => {
+            if (a.getAttribute('href').startsWith('#') && a.getAttribute('href').length > 1) {
+                a.addEventListener('click', e => {
+                    e.preventDefault(); 
+                    const targetId = a.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        if (navMenu.classList.contains('active')) {
+                            navMenu.classList.remove('active');
+                            const icon = menuToggle.querySelector('i');
+                            icon.classList.remove('fa-times');
+                            icon.classList.add('fa-bars');
+                        }
+                        
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            }
+        });
+        
+        // Inicializar site
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Site AEPIC carregado com Instagram funcional!');
+            updateInstagramCarousel();
+        });
+    </script>
+</body>
+</html>
