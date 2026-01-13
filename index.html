@@ -9,13 +9,14 @@
     <!-- Meta tags Instagram -->
     <meta property="og:title" content="AEPIC - Associação das Empresas do Parque Industrial de Cambé">
     <meta property="og:description" content="Fortalecendo empresas, impulsionando Cambé.">
-    <meta property="og:image" content="https://lh3.googleusercontent.com/d/1-NiJSQjgj-gb16G7LgNrvQ1sGTs2FclQ=s1000">
-    <meta property="og:url" content="https://seu-site-aepic.com">
+    <meta property="og:image" content="https://fabianocruzsite.github.io/aepic-site2/assets/img/LOGO%20AEPIC.png">
+    <meta property="og:url" content="https://fabianocruzsite.github.io/aepic-site2">
     <meta name="instagram:site" content="@associacaoaepic">
     
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        /* SEU CSS COMPLETO VAI AQUI - É EXATAMENTE O MESMO QUE VOCÊ JÁ TEM */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Poppins', sans-serif; line-height: 1.6; color: #202020; background: #E5E8EB; padding-top: 70px; }
         a { text-decoration: none; color: inherit; }
@@ -709,135 +710,44 @@
         }
         
         /* Instagram Carrossel */
-        .instagram-carousel {
-            position: relative;
-            margin-top: 2rem;
-            overflow: hidden;
-        }
-        
-        .instagram-container {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-            gap: 2rem;
-        }
-        
-        .instagram-page {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2rem;
-            flex: 0 0 100%;
-            min-width: 100%;
-        }
-        
-        .instagram-post {
-            background: white;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-            transition: all 0.3s ease;
-            border: 1px solid #e6e6e6;
-        }
-        
-        .instagram-post:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 25px rgba(0,0,0,0.12);
-        }
-        
-        .instagram-post-img {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-            display: block;
-        }
-        
-        .instagram-post-content {
-            padding: 1.5rem;
-        }
-        
-        .instagram-post h3 {
-            color: #161C33;
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
-            padding-bottom: 0.8rem;
-            border-bottom: 2px solid #E4405F;
-        }
-        
-        .instagram-post p {
-            color: #202020;
-            line-height: 1.6;
-            margin-bottom: 1.2rem;
-            font-size: 1rem;
-        }
-        
-        .instagram-post-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            color: #E4405F;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.3s;
-        }
-        
-        .instagram-post-link:hover {
-            color: #C13584;
-            text-decoration: underline;
-        }
-        
-        .instagram-controls {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: 3rem;
-            gap: 1.5rem;
-        }
-        
-        .instagram-btn {
-            background: #161C33;
-            color: white;
-            border: none;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            cursor: pointer;
-            font-size: 1.3rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-        }
-        
-        .instagram-btn:hover {
-            background: #68748C;
-            transform: scale(1.1);
-        }
-        
-        .instagram-dots {
-            display: flex;
-            gap: 0.8rem;
-        }
-        
-        .instagram-dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: #ccc;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-        
-        .instagram-dot.active {
-            background: #E4405F;
-            transform: scale(1.2);
-        }
-        
+        .instagram-carousel,
+        .instagram-container,
+        .instagram-page,
+        .instagram-post,
+        .instagram-post-img,
+        .instagram-post-content,
+        .instagram-controls,
+        .instagram-btn,
+        .instagram-dots,
+        .instagram-dot,
         .instagram-indicator {
-            font-size: 1.1rem;
-            color: #575A63;
-            font-weight: 500;
+            display: none !important;
         }
-        
+
+        /* INSTAGRAM – AJUSTE FINAL AEPIC */
+        .instagram-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .instagram-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .instagram-header h2 {
+            font-size: 32px;
+            margin: 0;
+        }
+
+        .instagram-feed {
+            width: 100%;
+        }
+
         /* REDES SOCIAIS */
         .social-footer {
             margin-top: 2rem;
@@ -1067,71 +977,13 @@
                 height: 200px;
             }
         }
-    
-/* ================================
-   LIMPEZA DO CARROSSEL ANTIGO
-   ================================ */
-.instagram-carousel,
-.instagram-container,
-.instagram-page,
-.instagram-post,
-.instagram-post-img,
-.instagram-post-content,
-.instagram-controls,
-.instagram-btn,
-.instagram-dots,
-.instagram-dot,
-.instagram-indicator {
-    display: none !important;
-}
-
-/* ================================
-   INSTAGRAM – AJUSTE FINAL AEPIC
-   ================================ */
-.instagram-section {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 60px 20px;
-}
-
-.instagram-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-    margin-bottom: 30px;
-}
-
-.instagram-header h2 {
-    font-size: 32px;
-    margin: 0;
-}
-
-.instagram-feed {
-    width: 100%;
-}
-
-/* ================================
-   RESPONSIVO
-   ================================ */
-@media (max-width: 768px) {
-    .instagram-header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .instagram-header h2 {
-        font-size: 24px;
-    }
-}
-
-</style>
+    </style>
 </head>
 <body>
     <!-- NAVBAR -->
     <nav>
         <div class="nav-container">
-            <img src="https://lh3.googleusercontent.com/d/1-NiJSQjgj-gb16G7LgNrvQ1sGTs2FclQ=s1000" alt="Logo AEPIC" class="logo-mobile">
+            <img src="assets/img/LOGO%20AEPIC.png" alt="Logo AEPIC" class="logo-mobile">
             
             <button class="menu-toggle" id="menuToggle">
                 <i class="fas fa-bars"></i>
@@ -1153,7 +1005,7 @@
     <!-- HERO -->
     <section id="home" class="hero">
         <div class="hero-content">
-            <img src="https://lh3.googleusercontent.com/d/1-NiJSQjgj-gb16G7LgNrvQ1sGTs2FclQ=s1000" alt="Logo AEPIC" class="logo-aepic">
+            <img src="assets/img/LOGO%20AEPIC.png" alt="Logo AEPIC" class="logo-aepic">
             
             <h1>Fortalecendo empresas, impulsionando Cambé.</h1>
             
@@ -1205,7 +1057,7 @@
         <p style="text-align: center; max-width: 800px; margin: 0 auto 3rem; font-size: 1.1rem; color: #575A63;">Gestão AEPIC 2025/2026</p>
         <div class="diretoria-grid">
             <div class="diretoria-card">
-                <img src="https://lh3.googleusercontent.com/d/1w13t4QdtqNwXJNgASzzum_ajy4mJEYo1=s1000" alt="Edcassio Pereira - Presidente AEPIC" loading="lazy">
+                <img src="assets/img/diretores/01%20edcassio.png" alt="Edcassio Pereira - Presidente AEPIC" loading="lazy">
                 <div class="card-content">
                     <h3>Edcassio Pereira</h3>
                     <div class="cargo">Presidente da AEPIC</div>
@@ -1215,7 +1067,7 @@
             </div>
 
             <div class="diretoria-card">
-                <img src="https://lh3.googleusercontent.com/d/1x0GJN32mfr2TO6x3K0QLm8nR4BzQRRWe=s1000" alt="Egberto Luis Jardinette - Vice-Presidente" loading="lazy">
+                <img src="assets/img/diretores/02%20egberto.png" alt="Egberto Luis Jardinette - Vice-Presidente" loading="lazy">
                 <div class="card-content">
                     <h3>Egberto Luis Jardinette</h3>
                     <div class="cargo">Vice-Presidente da AEPIC</div>
@@ -1225,7 +1077,7 @@
             </div>
 
             <div class="diretoria-card">
-                <img src="https://lh3.googleusercontent.com/d/1tU9d3kMy_uz8tH6U79lTvFgs-yLPP7tf=s1000" alt="Alex Ribeiro - Diretor Comercial AEPIC" loading="lazy">
+                <img src="assets/img/diretores/03%20alex.png" alt="Alex Ribeiro - Diretor Comercial AEPIC" loading="lazy">
                 <div class="card-content">
                     <h3>Alex Ribeiro</h3>
                     <div class="cargo">Diretor Comercial da AEPIC</div>
@@ -1235,7 +1087,7 @@
             </div>
 
             <div class="diretoria-card">
-                <img src="https://lh3.googleusercontent.com/d/1lU4cT1-hAWv_xVic4ykhC7k-rYKA83Vq=s1000" alt="Iratan Rugila - Diretor Operações AEPIC" loading="lazy">
+                <img src="assets/img/diretores/04%20iratan.png" alt="Iratan Rugila - Diretor Operações AEPIC" loading="lazy">
                 <div class="card-content">
                     <h3>Iratan Rugila</h3>
                     <div class="cargo">Diretor de Operações da AEPIC</div>
@@ -1253,92 +1105,82 @@
         
         <div class="empresas-grid">
             <div class="empresa-card">
-                <img src="https://lh3.googleusercontent.com/d/1rTvRRSrgjsSLc7RYCOjMh24gJawtJ_kY=s1000" alt="ACCOM Engenharia" class="empresa-logo">
+                <img src="assets/img/empresas/logo-accom.png" alt="ACCOM Engenharia" class="empresa-logo">
                 <div class="empresa-nome">ACCOM Engenharia</div>
             </div>
             
             <div class="empresa-card">
-                <img src="https://lh3.googleusercontent.com/d/15JCAlFJ-ahRcPmTZzWwOHQqCgRsl4W1U=s1000" alt="COCAMAR MÁQUINAS" class="empresa-logo">
+                <img src="assets/img/empresas/logo-cocamar.png" alt="COCAMAR MÁQUINAS" class="empresa-logo">
                 <div class="empresa-nome">COCAMAR MÁQUINAS</div>
             </div>
             
             <div class="empresa-card">
-                <img src="https://lh3.googleusercontent.com/d/1AG8LKL6s5Tq-3kz4clTqMTu_vDIMN0kG=s1000" alt="EDCASSIO CONSULTORIA" class="empresa-logo">
+                <img src="assets/img/empresas/logo-edcassio.png" alt="EDCASSIO CONSULTORIA" class="empresa-logo">
                 <div class="empresa-nome">EDCASSIO CONSULTORIA</div>
             </div>
             
             <div class="empresa-card">
-                <img src="https://lh3.googleusercontent.com/d/1XW7SSesADaGHeqM_KxNN3-H8uTir6OQI=s1000" alt="AESA" class="empresa-logo">
+                <img src="assets/img/empresas/logo-aesa.png" alt="AESA" class="empresa-logo">
                 <div class="empresa-nome">AESA</div>
             </div>
             
             <div class="empresa-card">
-                <img src="https://lh3.googleusercontent.com/d/1Lwafu3bINdLx-n8lz05xNidzEC5OY7Nt=s1000" alt="Brasser Indústrias" class="empresa-logo">
+                <img src="assets/img/empresas/logo-besser.png" alt="Brasser Indústrias" class="empresa-logo">
                 <div class="empresa-nome">Brasser Indústrias</div>
             </div>
             
             <div class="empresa-card">
-                <img src="https://lh3.googleusercontent.com/d/1YIe4m4_GTgY_yU9z6Uo0rs6b8OFIvn2F=s1000" alt="GDM" class="empresa-logo">
+                <img src="assets/img/empresas/logo-gdm.png" alt="GDM" class="empresa-logo">
                 <div class="empresa-nome">GDM</div>
             </div>
             
             <div class="empresa-card">
-                <img src="https://lh3.googleusercontent.com/d/1I-FB4pZh61lOxQ8r0FzUzyc5gUx9QUHw=s1000" alt="AXE NEGÓCIOS IMOBILIÁRIOS" class="empresa-logo">
+                <img src="assets/img/empresas/logo-axenogocisomobiliarios.png" alt="AXE NEGÓCIOS IMOBILIÁRIOS" class="empresa-logo">
                 <div class="empresa-nome">AXE NEGÓCIOS IMOBILIÁRIOS</div>
             </div>
             
             <div class="empresa-card">
-                <img src="https://lh3.googleusercontent.com/d/1zIinFx5htG-h8XpIg3j1R1bUFpxI5n9F=s1000" alt="INGÁ" class="empresa-logo">
-                <div class="empresa-nome">INGÁ</div>
-            </div>
-            
-            <div class="empresa-card">
-                <img src="https://lh3.googleusercontent.com/d/1TS7ynfS1a9U8FShsSLWQlNvhvQQz4eVT=s1000" alt="PROTEKTO VIDA" class="empresa-logo">
+                <img src="assets/img/empresas/logo-protekto.png" alt="PROTEKTO VIDA" class="empresa-logo">
                 <div class="empresa-nome">PROTEKTO VIDA</div>
             </div>
             
             <div class="empresa-card">
-                <img src="https://lh3.googleusercontent.com/d/12QQ5zE0K_JajWJRcqYVlCKTh2yQb_1gR=s1000" alt="PUTT BROTHERS" class="empresa-logo">
+                <img src="assets/img/empresas/logo-puttbrothers.png" alt="PUTT BROTHERS" class="empresa-logo">
                 <div class="empresa-nome">PUTT BROTHERS</div>
             </div>
             
             <div class="empresa-card">
-                <img src="https://lh3.googleusercontent.com/d/1_tw-Z8IP4nysazVQyn7KQHHV2SYw8F3V=s1000" alt="RISARTE" class="empresa-logo">
+                <img src="assets/img/empresas/logo-risarte.png" alt="RISARTE" class="empresa-logo">
                 <div class="empresa-nome">RISARTE</div>
             </div>
             
             <div class="empresa-card">
-                <img src="https://lh3.googleusercontent.com/d/1FXXENcLGF_t-T2nsdH4ZXf1sgHxPNxTf=s1000" alt="RIVESA" class="empresa-logo">
-                <div class="empresa-nome">RIVESA</div>
-            </div>
-            
-            <div class="empresa-card">
-                <img src="https://lh3.googleusercontent.com/d/1yQqYxP3_T4o4yV06l8oQZbEfr3Pj0x9o=s1000" alt="SANDOZ" class="empresa-logo">
+                <img src="assets/img/empresas/logo-sandoz.png" alt="SANDOZ" class="empresa-logo">
                 <div class="empresa-nome">SANDOZ</div>
             </div>
             
             <div class="empresa-card">
-                <img src="https://lh3.googleusercontent.com/d/1LVxrd2elJYfloYZ3WnfDmZSm49rzGkEr=s1000" alt="SEALS - NAVY SEALS PR" class="empresa-logo">
+                <img src="assets/img/empresas/logo-seals.png" alt="SEALS - NAVY SEALS PR" class="empresa-logo">
                 <div class="empresa-nome">SEALS - NAVY SEALS PR</div>
             </div>
             
             <div class="empresa-card">
-                <img src="https://lh3.googleusercontent.com/d/1apOeWwE_0InqAORZ8Nv-Fzwq7s1eO82s=s1000" alt="SPRAY DROP" class="empresa-logo">
+                <img src="assets/img/empresas/logo-spraydrop.png" alt="SPRAY DROP" class="empresa-logo">
                 <div class="empresa-nome">SPRAY DROP</div>
             </div>
             
             <div class="empresa-card">
-                <img src="https://lh3.googleusercontent.com/d/1TQm2xQ8Kqo_K3Z8pAvz3j5uN9EAVJ6Zt=s1000" alt="TL MENTORIA" class="empresa-logo">
+                <img src="assets/img/empresas/logo-thiagolochini.png" alt="TL MENTORIA" class="empresa-logo">
                 <div class="empresa-nome">TL MENTORIA</div>
             </div>
             
             <div class="empresa-card">
-                <img src="https://lh3.googleusercontent.com/d/1VnuHDTatcL-_5kCvduF9HIRBp5xut5RS=s1000" alt="TMG" class="empresa-logo">
+                <img src="assets/img/empresas/logo-tmg.png" alt="TMG" class="empresa-logo">
                 <div class="empresa-nome">TMG</div>
             </div>
             
             <div class="empresa-card">
-                <img src="https://lh3.googleusercontent.com/d/18qXYKjmQ7AfpB04bygIMXKUPyf4C6EQB=s1000" alt="VITAL MED" class="empresa-logo">
+                <img src="assets/img/empresas/logo-vitalmed.png" alt="VITAL MED" class="empresa-logo">
                 <div class="empresa-nome">VITAL MED</div>
             </div>
         </div>
@@ -1561,28 +1403,23 @@
     </section>
 
     <!-- INSTAGRAM -->
-<section id="noticias" style="background: #f8f9fa;">
-    <div class="instagram-section">
+    <section id="noticias" style="background: #f8f9fa;">
+        <div class="instagram-section">
+            <div class="instagram-header">
+                <h2><i class="fab fa-instagram"></i> Notícias da AEPIC no Instagram</h2>
+                <a href="https://www.instagram.com/associacaoaepic/" target="_blank" class="btn-instagram">
+                    <i class="fab fa-instagram"></i> Siga-nos no Instagram
+                </a>
+            </div>
 
-        <div class="instagram-header">
-            <h2>
-                <i class="fab fa-instagram"></i> Notícias da AEPIC no Instagram
-            </h2>
-            <a href="https://www.instagram.com/associacaoaepic/" target="_blank" class="btn-instagram">
-                <i class="fab fa-instagram"></i> Siga-nos no Instagram
-            </a>
+            <!-- FEED INSTAGRAM AUTOMÁTICO -->
+            <div class="instagram-feed">
+                <div class="elfsight-app-30ca9272-ab93-41e7-9d4a-05892c3c4fbc"></div>
+            </div>
         </div>
+    </section>
 
-        <!-- FEED INSTAGRAM AUTOMÁTICO -->
-        <div class="instagram-feed">
-            <div class="elfsight-app-30ca9272-ab93-41e7-9d4a-05892c3c4fbc"></div>
-        </div>
-
-    </div>
-</section>
-
-<script src="https://static.elfsight.com/platform/platform.js" async></script>
-
+    <script src="https://static.elfsight.com/platform/platform.js" async></script>
 
     <!-- CONTATO -->
     <section id="contato" style="background: white;">
@@ -1805,57 +1642,6 @@
             autoRotateVagas = setInterval(nextVagaPage, 10000);
         });
         
-        // Carrossel do Instagram
-        const instagramContainer = document.getElementById('instagramContainer');
-        const prevInstagramBtn = document.getElementById('prevInstagramBtn');
-        const nextInstagramBtn = document.getElementById('nextInstagramBtn');
-        const instagramDots = document.querySelectorAll('.instagram-dot');
-        const instagramIndicator = document.getElementById('instagramIndicator');
-        
-        let currentInstagramPage = 0;
-        const totalInstagramPages = 2;
-        
-        function updateInstagramCarousel() {
-            const offset = -currentInstagramPage * 100;
-            instagramContainer.style.transform = `translateX(${offset}%)`;
-            
-            instagramDots.forEach((dot, index) => {
-                dot.classList.toggle('active', index === currentInstagramPage);
-            });
-            
-            instagramIndicator.textContent = `${currentInstagramPage + 1}/${totalInstagramPages}`;
-        }
-        
-        function nextInstagramPage() {
-            currentInstagramPage = (currentInstagramPage + 1) % totalInstagramPages;
-            updateInstagramCarousel();
-        }
-        
-        function prevInstagramPage() {
-            currentInstagramPage = (currentInstagramPage - 1 + totalInstagramPages) % totalInstagramPages;
-            updateInstagramCarousel();
-        }
-        
-        nextInstagramBtn.addEventListener('click', nextInstagramPage);
-        prevInstagramBtn.addEventListener('click', prevInstagramPage);
-        
-        instagramDots.forEach((dot, index) => {
-            dot.addEventListener('click', () => {
-                currentInstagramPage = index;
-                updateInstagramCarousel();
-            });
-        });
-        
-        let autoRotateInstagram = setInterval(nextInstagramPage, 8000);
-        
-        instagramContainer.addEventListener('mouseenter', () => {
-            clearInterval(autoRotateInstagram);
-        });
-        
-        instagramContainer.addEventListener('mouseleave', () => {
-            autoRotateInstagram = setInterval(nextInstagramPage, 8000);
-        });
-        
         // Formulário
         const formContato = document.getElementById('formContato');
         const btnEnviar = document.getElementById('btnEnviar');
@@ -1918,7 +1704,6 @@
         // Inicializar site
         document.addEventListener('DOMContentLoaded', function() {
             console.log('Site AEPIC carregado com Instagram funcional!');
-            updateInstagramCarousel();
         });
     </script>
 </body>
